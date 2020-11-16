@@ -1,0 +1,71 @@
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            background: #f0f0f0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            background: #1f1f1f;
+            padding: 30px;
+            width: 600px;
+            height: 80%;
+        }
+
+        h1, p {
+            font-family: Arial;
+            color: white;
+            text-align: center;
+        }
+
+        form {
+            margin: 0;
+        }
+
+        form > div {
+            margin: 5px;
+        }
+
+        input, select {
+            display: block;
+            width: 100%;
+            border: none;
+            padding: 5px;
+            font-family: Arial;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>42 Events - Get participants list</h1>
+        <hr><br>
+        <form action="/users">
+            <div>
+                <select name="event-id">
+                    <% events.forEach(function(event){ %>
+                        <option
+                            value="<%= event.id %>"
+                        >
+                            <%= event.name %> - <%= event.date %>
+                        </option>
+                    <% }); %>
+                </select>
+            </div>
+        
+            <div>
+                <input type="submit" value="Voir la liste des utilisateurs">
+            </div>
+        </form>
+    </section>
+</body>
+</html>

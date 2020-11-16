@@ -1,0 +1,68 @@
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            background: #f0f0f0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            background: #1f1f1f;
+            padding: 30px;
+            width: 600px;
+            height: 80%;
+        }
+
+        h1, p {
+            font-family: Arial;
+            color: white;
+            text-align: center;
+        }
+
+        form {
+            margin: 0;
+        }
+
+        form > div {
+            margin: 5px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            border: none;
+            padding: 5px;
+            font-family: Arial;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>42 Events - Get participants list</h1>
+        <hr><br>
+        <p>Copy and paste your event name from intra. The name must be exactly the same!</p>
+        <form action="/events">
+            <div>
+                <input
+                    type="text"
+                    name="event-name"
+                    placeholder="Collez le nom de l'événement ici"
+                >
+            </div>
+
+            <div>
+                <input type="submit" value="Trouver mon événement">
+            </div>
+        </form>
+    </section>
+</body>
+</html>
